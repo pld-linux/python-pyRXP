@@ -15,9 +15,9 @@ Version:	0.9
 Release:	1
 License:	GPL v2
 Group:		Libraries/Python
-Source0:	http://www.reportlab.com/ftp/%{module}-0-9.tgz
+Source0:	http://www.reportlab.org/ftp/%{module}-0-9.tgz
 # Source0-md5:	7d69870d3884f9e40f111a62525e0d77
-URL:		http://www.reportlab.com/pyrxp.html
+URL:		http://www.reportlab.org/pyrxp.html
 BuildRequires:	python-devel >= 2.2.1
 BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python-modules
@@ -41,6 +41,7 @@ python setup.py build
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{py_sitedir}
 
 python setup.py install \
 	--root=$RPM_BUILD_ROOT --optimize=2
