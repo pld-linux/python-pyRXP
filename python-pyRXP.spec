@@ -8,7 +8,7 @@
 
 %define module pyRXP
 
-Summary:	A Python wrapper for the RXP parser 
+Summary:	A Python wrapper for the RXP parser
 Summary(pl):	Pythonowy interfejs do parsera XML RXP
 Name:		python-%{module}
 Version:	0.9
@@ -37,7 +37,7 @@ analizatora XML z obs³ug± przestrzeni nazw napisanego w C.
 %build
 CFLAGS="%{rpmcflags}"
 export CFLAGS
-python setup.py build 
+python setup.py build
 
 %install
 rm -rf $RPM_BUILD_ROOT
