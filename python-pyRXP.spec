@@ -12,12 +12,12 @@ Summary:	A Python wrapper for the RXP parser
 Summary(pl):	Pythonowy interfejs do analizatora XML RXP
 Name:		python-%{module}
 Version:	0.9
-Release:	0.4
+Release:	1
 License:	GPL v2
 Group:		Libraries/Python
 Source0:	http://www.reportlab.com/ftp/%{module}-0-9.tgz
 # Source0-md5:	7d69870d3884f9e40f111a62525e0d77
-URL:		http://www.reportlab.com/xml/pyrxp.html
+URL:		http://www.reportlab.com/pyrxp.html
 BuildRequires:	python-devel >= 2.2.1
 BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python-modules
