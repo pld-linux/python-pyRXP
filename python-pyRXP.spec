@@ -6,7 +6,6 @@
 #   (need for spec for http://www.reportlab.org/rl_toolkit.html)
 #
 
-%include	/usr/lib/rpm/macros.python
 
 %define	module	pyRXP
 
