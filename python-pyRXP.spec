@@ -22,7 +22,6 @@ Source1:	http://www.reportlab.com/docs/PyRXP_Documentation.pdf
 # Source1-md5:	3ae69ba61f1facea5b76e91dbee8718e
 URL:		http://www.reportlab.org/pyrxp.html
 BuildRequires:	python-devel >= 2.2.1
-BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
