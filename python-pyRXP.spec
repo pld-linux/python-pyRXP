@@ -6,7 +6,7 @@
 
 %include	/usr/lib/rpm/macros.python
 
-%define module pyRXP
+%define	module	pyRXP
 
 Summary:	A Python wrapper for the RXP parser
 Summary(pl):	Pythonowy interfejs do analizatora XML RXP
