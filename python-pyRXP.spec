@@ -1,6 +1,7 @@
 
 #
 # todo:
+# - use external rxp
 # - pl descriptions
 #
 
