@@ -2,7 +2,6 @@
 #
 # todo:
 # - use external rxp
-# - pl descriptions
 #
 
 %include	/usr/lib/rpm/macros.python
@@ -10,7 +9,7 @@
 %define module pyRXP
 
 Summary:	A Python wrapper for the RXP parser 
-Summary(pl):	Wrapper na parser XML RXP
+Summary(pl):	Pythonowy interfejs do parsera XML RXP
 Name:		python-%{module}
 Version:	0.9
 Release:	0.4
@@ -19,14 +18,18 @@ Group:		Libraries/Python
 Source0:	http://www.reportlab.com/ftp/%{module}-0-9.tgz
 # Source0-md5:	7d69870d3884f9e40f111a62525e0d77
 URL:		http://www.reportlab.com/xml/pyrxp.html
-BuildRequires:	rpm-pythonprov
 BuildRequires:	python-devel >= 2.2.1
+BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-pyRXP is a python wrapper for RXP, a validating namespace-aware
+pyRXP is a Python wrapper for RXP, a validating namespace-aware
 XML parser in C.
+
+%description -l pl
+pyRXP to pythonowy interfejs do RXP - kontroluj±cego poprawno¶æ
+analizatora XML z obs³ug± przestrzeni nazw napisanego w C.
 
 %prep
 %setup -q -c %{module}-%{version}
