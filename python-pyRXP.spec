@@ -10,7 +10,7 @@
 %define	module	pyRXP
 
 Summary:	A Python wrapper for the RXP parser
-Summary(pl):	Pythonowy interfejs do analizatora XML RXP
+Summary(pl.UTF-8):   Pythonowy interfejs do analizatora XML RXP
 Name:		python-%{module}
 Version:	0.9
 Release:	2
@@ -29,33 +29,33 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 pyRXP is a Python wrapper for RXP, a validating namespace-aware
 XML parser in C.
 
-%description -l pl
-pyRXP to pythonowy interfejs do RXP - kontroluj±cego poprawno¶æ
-analizatora XML-a z obs³ug± przestrzeni nazw, napisanego w C.
+%description -l pl.UTF-8
+pyRXP to pythonowy interfejs do RXP - kontrolujÄ…cego poprawnoÅ›Ä‡
+analizatora XML-a z obsÅ‚ugÄ… przestrzeni nazw, napisanego w C.
 
 %package doc
 Summary:	Documentation for Python pyRXP module
-Summary(pl):	Dokumentacja do modu³u Pythona pyRXP
+Summary(pl.UTF-8):   Dokumentacja do moduÅ‚u Pythona pyRXP
 Group:		Libraries/Python
 Requires:	%{name} = %{version}-%{release}
 
 %description doc
 This package contains documentation files for Python pyRXP module.
 
-%description doc -l pl
-Pakiet zawieraj±cy dokumentacjê dla modu³u Pythona pyRXP.
+%description doc -l pl.UTF-8
+Pakiet zawierajÄ…cy dokumentacjÄ™ dla moduÅ‚u Pythona pyRXP.
 
 %package examples
 Summary:	Example programs for Python pyRXP module
-Summary(pl):	Programy przyk³adowe do modu³u Pythona pyRXP
+Summary(pl.UTF-8):   Programy przykÅ‚adowe do moduÅ‚u Pythona pyRXP
 Group:		Development/Languages/Python
 Requires:	%{name} = %{version}-%{release}
 
 %description examples
 This package contains example programs for Python pyRXP module.
 
-%description examples -l pl
-Pakiet zawieraj±cy programy przyk³adowe dla modu³u Pythona pyRXP.
+%description examples -l pl.UTF-8
+Pakiet zawierajÄ…cy programy przykÅ‚adowe dla moduÅ‚u Pythona pyRXP.
 
 %prep
 %setup -q -c %{module}-%{version}
