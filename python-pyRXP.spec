@@ -10,7 +10,7 @@
 %define	module	pyRXP
 
 Summary:	A Python wrapper for the RXP parser
-Summary(pl.UTF-8):   Pythonowy interfejs do analizatora XML RXP
+Summary(pl.UTF-8):	Pythonowy interfejs do analizatora XML RXP
 Name:		python-%{module}
 Version:	0.9
 Release:	2
@@ -35,7 +35,7 @@ analizatora XML-a z obsługą przestrzeni nazw, napisanego w C.
 
 %package doc
 Summary:	Documentation for Python pyRXP module
-Summary(pl.UTF-8):   Dokumentacja do modułu Pythona pyRXP
+Summary(pl.UTF-8):	Dokumentacja do modułu Pythona pyRXP
 Group:		Libraries/Python
 Requires:	%{name} = %{version}-%{release}
 
@@ -47,7 +47,7 @@ Pakiet zawierający dokumentację dla modułu Pythona pyRXP.
 
 %package examples
 Summary:	Example programs for Python pyRXP module
-Summary(pl.UTF-8):   Programy przykładowe do modułu Pythona pyRXP
+Summary(pl.UTF-8):	Programy przykładowe do modułu Pythona pyRXP
 Group:		Development/Languages/Python
 Requires:	%{name} = %{version}-%{release}
 
