@@ -6,20 +6,20 @@
 #   (need for spec for http://www.reportlab.org/rl_toolkit.html)
 #
 
-
-%define	module	pyRXP
+%define		_snap	20071106
+%define		module	pyRXP
 
 Summary:	A Python wrapper for the RXP parser
 Summary(pl.UTF-8):	Pythonowy interfejs do analizatora XML RXP
 Name:		python-%{module}
-Version:	0.9
-Release:	2
+Version:	1.12
+Release:	1
 License:	GPL v2
 Group:		Libraries/Python
-Source0:	http://www.reportlab.org/ftp/%{module}-0-9.tgz
-# Source0-md5:	7d69870d3884f9e40f111a62525e0d77
+Source0:	http://www.reportlab.org/daily/%{module}-%{version}-daily-unix.tgz
+# Source0-md5:	614ec61a1f65231e8018897b5f5e2f5f
 Source1:	http://www.reportlab.com/docs/PyRXP_Documentation.pdf
-# Source1-md5:	3ae69ba61f1facea5b76e91dbee8718e
+# Source1-md5:	984096b03131336f4eb53de829782576
 URL:		http://www.reportlab.org/pyrxp.html
 BuildRequires:	python-devel >= 2.2.1
 %pyrequires_eq	python-modules
@@ -58,9 +58,10 @@ This package contains example programs for Python pyRXP module.
 Pakiet zawierający programy przykładowe dla modułu Pythona pyRXP.
 
 %prep
-%setup -q -c %{module}-%{version}
+%setup -q -n pyRXP-%{version}-%{_snap}
 
 %build
+cd pyRXP
 CFLAGS="%{rpmcflags}"
 export CFLAGS
 python setup.py build
@@ -68,6 +69,7 @@ python setup.py build
 cp -a %{SOURCE1} docs
 
 %install
+cd pyRXP
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{py_sitedir},%{_examplesdir}/%{name}-%{version}}
 
@@ -81,12 +83,13 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README
+%doc pyRXP/README
+%{py_sitedir}/pyRXP-%{version}-py*.egg-info
 %attr(755,root,root) %{py_sitedir}/*.so
 
 %files doc
 %defattr(644,root,root,755)
-%doc docs/PyRXP_Documentation.pdf
+%doc pyRXP/docs/PyRXP_Documentation.pdf
 
 %files examples
 %defattr(644,root,root,755)
