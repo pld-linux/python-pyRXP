@@ -21,7 +21,8 @@ Source0:	http://www.reportlab.org/daily/%{module}-%{version}-daily-unix.tgz
 Source1:	http://www.reportlab.com/docs/PyRXP_Documentation.pdf
 # Source1-md5:	984096b03131336f4eb53de829782576
 URL:		http://www.reportlab.org/pyrxp.html
-BuildRequires:	python-devel >= 2.2.1
+BuildRequires:	python-devel >= 1:2.5
+BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
