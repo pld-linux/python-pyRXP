@@ -70,10 +70,10 @@ python setup.py build
 cp -a %{SOURCE1} docs
 
 %install
-cd pyRXP
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{py_sitedir},%{_examplesdir}/%{name}-%{version}}
 
+cd pyRXP
 python setup.py install \
 	--root=$RPM_BUILD_ROOT --optimize=2
 
