@@ -63,9 +63,7 @@ Pakiet zawierający programy przykładowe dla modułu Pythona pyRXP.
 
 %build
 cd pyRXP
-CFLAGS="%{rpmcflags}"
-export CFLAGS
-python setup.py build
+%py_build
 
 cp -a %{SOURCE1} docs
 
@@ -74,8 +72,7 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{py_sitedir},%{_examplesdir}/%{name}-%{version}}
 
 cd pyRXP
-python setup.py install \
-	--root=$RPM_BUILD_ROOT --optimize=2
+%py_install
 
 cp -a examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
